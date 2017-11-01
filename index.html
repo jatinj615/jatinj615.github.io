@@ -27,7 +27,6 @@
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div class="navbar-wrapper">
          <div class="container">
-
            <nav class="navbar navbar-inverse navbar-static-top">
              <div class="container">
                <div class="navbar-header">
@@ -81,6 +80,83 @@
        	</ul>
        </div>
        <!-- /Banner -->
+       <!-- About -->
+       <div class="about-me" id="about">
+       	<h3 class="text-center slideanim">About My Skills</h3>
+       	<div class="container">
+       		<div class="row">
+       			<div class="col-md-4 col-xs-12">
+       				<div class="mydetails slideanim text-center">
+       					<img class="img-circle img-responsive" src="images/man.jpg" alt="Generic placeholder image" width="200" height="200">
+       					<h3>Jatin Jain</h3>
+       					<p>Web Developer | Competitive Coder</p>
+       					<div class="social-icons">
+                  <a href="https://www.facebook.com/jatinj"><span><i class="fa fa-facebook-square fa-3x" aria-hidden="true" style="color: #3b5998"></i></span></a>
+         					<a href="https://github.com/jatinj615"><span><i class="fa fa-github-square fa-3x" aria-hidden="true" style="color: #0D0E10"></i></span></a>
+         					<a href="https://www.linkedin.com/in/jatin-jain-165965140/"><span><i class="fa fa-linkedin-square fa-3x" aria-hidden="true" style="color: #0077B5"></i></span></a>
+         					<a href="https://plus.google.com/u/0/115479719431385886996"><span><i class="fa fa-google-plus-square fa-3x" aria-hidden="true" style="color: #d34836"></i></span></a>
+         				</div>
+       				</div>
+       			</div>
+       			<div class="col-md-8 col-xs-12">
+       				<div class="myskills slideanim">
+       					<h3 class="text-center">My Skill Info</h3>
+       					<p class="skill-text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+       					<div class="skill-info">
+       						<div class="table-responsive">
+       							<table class="table">
+       								<tbody>
+       									<tr>
+       										<td><h4>HTML5</h4></td>
+       										<td><span class="longline1"></span><span class="shortline1"></span></td>
+       										<td><p>89%</p></td>
+       									</tr>
+       									<tr>
+       										<td><h4>CSS 3</h4></td>
+       										<td><span class="longline2"></span><span class="shortline2"></span></td>
+       										<td><p>90%</p></td>
+       									</tr>
+       									<tr>
+       										<td><h4>Java Script</h4></td>
+       										<td><span class="longline3"></span><span class="shortline3"></span></td>
+       										<td><p>95%</p></td>
+       									</tr>
+       									<tr>
+       										<td><h4>Ajax</h4></td>
+       										<td><span class="longline4"></span><span class="shortline4"></span></td>
+       										<td><p>92%</p></td>
+       									</tr>
+       									<tr>
+       										<td><h4>Jquery</h4></td>
+       										<td><span class="longline5"></span><span class="shortline5"></span></td>
+       										<td><p>96%</p></td>
+       									</tr>
+                        <tr>
+       										<td><h4>PHP</h4></td>
+       										<td><span class="longline5"></span><span class="shortline5"></span></td>
+       										<td><p>96%</p></td>
+       									</tr>
+                        <tr>
+       										<td><h4>Java</h4></td>
+       										<td><span class="longline5"></span><span class="shortline5"></span></td>
+       										<td><p>96%</p></td>
+       									</tr>
+                        <tr>
+       										<td><h4>Python</h4></td>
+       										<td><span class="longline5"></span><span class="shortline5"></span></td>
+       										<td><p>96%</p></td>
+       									</tr>
+       								</tbody>
+       							</table>
+       						</div>
+       					</div>
+       				</div>
+       			</div>
+       		</div>
+       	</div>
+       </div>
+       <!-- /About -->
+
 
 
 
@@ -111,5 +187,46 @@
   			new grid3D( document.getElementById( 'grid3d' ) );
   		</script>
   	<!-- /js files for portfolio -->
+  	<!-- js for smooth scrolling -->
+
+  		<script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links in navbar + footer link
+          $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+          });
+        })
+
+      </script>
+      	<!-- /js for smooth scrolling -->
+  	<!-- js for sliding -->
+
+  	<script>
+      	$(window).scroll(function() {
+        $(".slideanim").each(function(){
+          var pos = $(this).offset().top;
+
+          var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+        });
+      });
+    </script>
+  	<!-- /js for sliding -->
+  	<!-- /js files -->
+
   </body>
 </html>
