@@ -1,0 +1,59 @@
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 50px auto;
+	/* remove display block if full width needed */
+	/* display: block; */
+	white-space: nowrap;
+	font-weight: 700;
+}
+
+.achv-table-wrapper{
+	overflow-x:scroll;
+	scrollbar-width: none;
+}
+
+.achv-table-wrapper::-webkit-scrollbar { 
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+/* Zebra striping */
+
+tr:nth-of-type(odd) {
+	background: #eee;
+}
+
+tr th:hover{
+	cursor: auto;
+}
+
+th {
+	background: #3498db;
+	color: white;
+	font-weight: bold;
+}
+
+td, th {
+	font-size: 16px;
+	padding: 10px;
+	/* border: 1px solid #ccc;  */
+	text-align: left;
+}
+
+td {
+	font-size: 14px;
+}
+
+td a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
